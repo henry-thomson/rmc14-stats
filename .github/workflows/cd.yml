@@ -10,6 +10,7 @@ jobs:
     permissions:
       packages: write
       contents: read
+    environment: production
 
     steps:
       - uses: actions/checkout@v4
@@ -54,8 +55,8 @@ jobs:
         env:
           SERVER_SSH_KNOWN_HOSTS: ${{secrets.SERVER_SSH_KNOWN_HOSTS}}
 
-      # - name: Deploy
-      #   run: |
-      #     ssh diraven@$SERVER_SSH_HOST 'cd services/rmc14_stats && docker compose down && docker compose pull && docker compose up -d'
-      #   env:
-      #     SERVER_SSH_HOST: ${{secrets.SERVER_SSH_HOST}}
+      - name: Deploy
+        run: |
+          ssh diraven@$SERVER_SSH_HOST 'cd services/rmc14_stats && docker compose pull'
+        env:
+          SERVER_SSH_HOST: ${{secrets.SERVER_SSH_HOST}}
