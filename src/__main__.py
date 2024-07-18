@@ -2,9 +2,8 @@ import datetime
 import re
 import typing as t
 
-import psycopg.errors
 import requests
-import unzip_http
+import unzip_http  # type: ignore
 import yaml
 from loguru import logger
 
@@ -13,7 +12,7 @@ from src import models
 ROOT_URL = "https://replays.rouny-ss14.com/replays/alamo"
 HREF_FINDER = re.compile(r'<a href="([\d]+)\/">')
 REPLAY_FINDER = re.compile(r'<a href="([^"]+\.zip)">')
-
+TIMEOUT = 5
 
 RoundSummary = t.Dict[str, t.Any]
 
@@ -36,16 +35,18 @@ class Replays:
     def _replay_urls(self):
         # TODO: Extract files in reversed order so that if we hit ones we already have
         # we can stop early.
-        response = requests.get(ROOT_URL)
+        response = requests.get(ROOT_URL, timeout=TIMEOUT)
         for year in HREF_FINDER.finditer(response.text):
             year = year.group(1)
-            response = requests.get(f"{ROOT_URL}/{year}/")
+            response = requests.get(f"{ROOT_URL}/{year}/", timeout=TIMEOUT)
             for month in HREF_FINDER.finditer(response.text):
                 month = month.group(1)
-                response = requests.get(f"{ROOT_URL}/{year}/{month}/")
+                response = requests.get(f"{ROOT_URL}/{year}/{month}/", timeout=TIMEOUT)
                 for day in HREF_FINDER.finditer(response.text):
                     day = day.group(1)
-                    response = requests.get(f"{ROOT_URL}/{year}/{month}/{day}/")
+                    response = requests.get(
+                        f"{ROOT_URL}/{year}/{month}/{day}/", timeout=TIMEOUT
+                    )
                     for replay in REPLAY_FINDER.finditer(response.text):
                         replay = replay.group(1)
                         replay_url = f"{ROOT_URL}/{year}/{month}/{day}/{replay}"
