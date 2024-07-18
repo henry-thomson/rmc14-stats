@@ -25,7 +25,7 @@ class ExtractOutput(t.TypedDict):
 class TransformOutput(t.TypedDict):
     date: datetime.datetime
     map: str
-    winning_faction: str | None
+    winning_faction: str
     players: list[dict[str, str]]
     round_id: int
 
@@ -131,7 +131,7 @@ class Replays:
         elif any(
             (("Mutual Annihilation!" in data["roundEndText"]),),
         ):
-            winning_faction = None
+            winning_faction = "none"
         else:
             raise RuntimeError(
                 f"Unable to parse end round message, winner unknown: {data['roundEndText']}"

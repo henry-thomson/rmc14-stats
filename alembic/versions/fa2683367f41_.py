@@ -19,8 +19,9 @@ depends_on: Union[str, Sequence[str], None] = None
 
 def upgrade() -> None:
     with models.Session.begin() as session:
-        session.merge(models.Faction(name="xenonids"))
-        session.merge(models.Faction(name="unmc"))
+        session.add(models.Faction(name="xenonids"))
+        session.add(models.Faction(name="unmc"))
+        session.add(models.Faction(name="none"))
 
 
 def downgrade() -> None:
