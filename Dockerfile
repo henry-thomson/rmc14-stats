@@ -9,5 +9,7 @@ RUN uv venv && uv pip install --requirement requirements.txt
 
 COPY . .
 
+RUN ["chmod", "+x", "/app/entrypoint.sh"]
+
 ENTRYPOINT ["/app/entrypoint.sh"]
 CMD [".venv/bin/python", "-m", "src"]
