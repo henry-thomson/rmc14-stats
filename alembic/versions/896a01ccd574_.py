@@ -32,7 +32,7 @@ def upgrade() -> None:
             ):
                 round.winning_faction = "unmc"
             elif any(("All of the marines were wiped out!" in round.round_end_text,)):
-                round.winning_faction = "xenoids"
+                round.winning_faction = "xenonids"
             elif any(
                 (("Mutual Annihilation!" in round.round_end_text),),
             ):

@@ -22,7 +22,7 @@ depends_on: Union[str, Sequence[str], None] = None
 def upgrade() -> None:
     with models.Session.begin() as session:
         session.add(models.Faction(id=models.DEFAULT_WINNING_FACTION))
-        session.add(models.Faction(id="xenoids"))
+        session.add(models.Faction(id="xenonids"))
         session.execute(
             sa.update(models.Round).values(
                 winning_faction=models.DEFAULT_WINNING_FACTION
