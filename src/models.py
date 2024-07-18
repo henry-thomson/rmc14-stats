@@ -59,7 +59,9 @@ class Round(Base):
         sa.types.DateTime(timezone=True),
         default=datetime.datetime.now(tz=datetime.timezone.utc),
     )
-    map: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String())
+    map_id: sa_orm.Mapped[int] = sa_orm.mapped_column(
+        sa.ForeignKey("maps.id"), nullable=True
+    )
     winning_faction_id: sa_orm.Mapped[int | None] = sa_orm.mapped_column(
         sa.ForeignKey("factions.id"), nullable=True
     )
