@@ -19,6 +19,7 @@ convention = {
 metadata = sa.MetaData(naming_convention=convention)
 
 DEFAULT_JOB = "CMRifleman"
+DEFAULT_WINNING_FACTION = "unmc"
 
 
 class Base(sa_orm.DeclarativeBase):
@@ -41,6 +42,11 @@ class Player(Base):
     name: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String(100))
 
 
+class Faction(Base):
+    __tablename__ = "factions"
+    id: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String(100), primary_key=True)
+
+
 class Round(Base):
     __tablename__ = "rounds"
     id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.BigInteger, primary_key=True)
@@ -49,7 +55,9 @@ class Round(Base):
         default=datetime.datetime.now(tz=datetime.timezone.utc),
     )
     map: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.ForeignKey("maps.id"))
-    round_end_text: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.Text())
+    winning_faction: sa_orm.Mapped[str | None] = sa_orm.mapped_column(
+        sa.ForeignKey("factions.id"), nullable=True
+    )
 
 
 class PlayerRound(Base):

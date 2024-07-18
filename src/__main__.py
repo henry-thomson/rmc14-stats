@@ -25,7 +25,7 @@ class ExtractOutput(t.TypedDict):
 class TransformOutput(t.TypedDict):
     date: datetime.datetime
     map: str
-    round_end_text: str
+    winning_faction: str | None
     players: list[dict[str, str]]
     round_id: int
 
@@ -81,7 +81,6 @@ class Replays:
                 yield {"date": date, "data": data}
             except Exception:
                 logger.warning(f"Bad zip file {replay_url}")
-                # Just save empty files so that we don't try to download them again.
 
     def _transform(
         self,
@@ -112,7 +111,27 @@ class Replays:
             for x in data["roundEndPlayers"]
         ]
 
-        round_end_text = data["roundEndText"]
+        if any(
+            (
+                "All of the xenos were wiped out!" in data["roundEndText"],
+                "Marine Major victory!" in data["roundEndText"],
+                "The xenos hijacked a dropship" in data["roundEndText"]
+                and "but were wiped out by the marine" in data["roundEndText"],
+                "The xeno hive was thrown into disarray after losing its xeno Queen!"
+                in data["roundEndText"],
+            ),
+        ):
+            winning_faction = "unmc"
+        elif any(("All of the marines were wiped out!" in data["roundEndText"],)):
+            winning_faction = "xenoids"
+        elif any(
+            (("Mutual Annihilation!" in data["roundEndText"]),),
+        ):
+            winning_faction = None
+        else:
+            raise RuntimeError(
+                f"Unable to parse end round message, winner unknown: {data['roundEndText']}"
+            )
 
         round_id = int(data["roundId"])
 
@@ -120,7 +139,7 @@ class Replays:
             "date": date,
             "map": map_str,
             "round_id": round_id,
-            "round_end_text": round_end_text,
+            "winning_faction": winning_faction,
             "players": players,
         }
 
@@ -135,7 +154,7 @@ class Replays:
                 models.Round(
                     id=transform_output["round_id"],
                     map=map_.id,
-                    round_end_text=transform_output["round_end_text"],
+                    winning_faction=transform_output["winning_faction"],
                     created_at=transform_output["date"],
                 )
             )
