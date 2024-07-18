@@ -13,6 +13,7 @@ ROOT_URL = "https://replays.rouny-ss14.com/replays/alamo"
 HREF_FINDER = re.compile(r'<a href="([\d]+)\/">')
 REPLAY_FINDER = re.compile(r'<a href="([^"]+\.zip)">')
 TIMEOUT = 5
+BACKFILL_DAYS = 7
 
 RoundSummary = t.Dict[str, t.Any]
 
@@ -33,17 +34,16 @@ class TransformOutput(t.TypedDict):
 class Replays:
     @property
     def _replay_urls(self):
-        # TODO: Extract files in reversed order so that if we hit ones we already have
-        # we can stop early.
         response = requests.get(ROOT_URL, timeout=TIMEOUT)
-        for year in HREF_FINDER.finditer(response.text):
+        for year in reversed(list(HREF_FINDER.finditer(response.text))):
             year = year.group(1)
             response = requests.get(f"{ROOT_URL}/{year}/", timeout=TIMEOUT)
-            for month in HREF_FINDER.finditer(response.text):
+            for month in reversed(list(HREF_FINDER.finditer(response.text))):
                 month = month.group(1)
                 response = requests.get(f"{ROOT_URL}/{year}/{month}/", timeout=TIMEOUT)
-                for day in HREF_FINDER.finditer(response.text):
+                for day in reversed(list(HREF_FINDER.finditer(response.text))):
                     day = day.group(1)
+
                     response = requests.get(
                         f"{ROOT_URL}/{year}/{month}/{day}/", timeout=TIMEOUT
                     )
@@ -63,6 +63,11 @@ class Replays:
                 hour=int(hour),
                 minute=int(minute),
             )
+            # Do not process records older then a week.
+            if date < datetime.datetime.now() - datetime.timedelta(days=BACKFILL_DAYS):
+                # Next records are too old, don't need any of those.
+                logger.info("Skipping the rest of records as they are too old.")
+                break
 
             try:
                 logger.info(f"Downloading {replay_url}")
@@ -158,13 +163,17 @@ class Replays:
                 map_ = models.Map(name=transform_output["map"])
                 session.add(map_)
 
-            if session.query(models.Round).get(transform_output["round_id"]):
+            if (
+                session.query(models.Round)
+                .filter(models.Round.id == transform_output["round_id"])
+                .one_or_none()
+            ):
                 return
 
             round_ = session.merge(
                 models.Round(
                     id=transform_output["round_id"],
-                    map=map_.id,
+                    map_id=map_.id,
                     winning_faction_id=(
                         session.query(models.Faction)
                         .filter(
