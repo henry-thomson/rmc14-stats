@@ -107,6 +107,10 @@ class Replays:
                 else models.DEFAULT_JOB,
                 "ic_name": x["playerICName"],
                 "ooc_name": x["playerOOCName"],
+                "faction": "xenonids"
+                if len(x["jobPrototypes"]) > 0
+                and x["jobPrototypes"][0].startswith("CMXeno")
+                else "unmc",
             }
             for x in data["roundEndPlayers"]
         ]
@@ -145,7 +149,14 @@ class Replays:
 
     def _load(self, transform_output: TransformOutput):
         with models.Session.begin() as session:
-            map_ = session.merge(models.Map(id=transform_output["map"]))
+            map_ = (
+                session.query(models.Map)
+                .filter(models.Map.name == transform_output["map"])
+                .one_or_none()
+            )
+            if not map_:
+                map_ = models.Map(name=transform_output["map"])
+                session.add(map_)
 
             if session.query(models.Round).get(transform_output["round_id"]):
                 return
@@ -154,20 +165,49 @@ class Replays:
                 models.Round(
                     id=transform_output["round_id"],
                     map=map_.id,
-                    winning_faction=transform_output["winning_faction"],
+                    winning_faction_id=(
+                        session.query(models.Faction)
+                        .filter(
+                            models.Faction.name == transform_output["winning_faction"]
+                        )
+                        .one()
+                        .id
+                    ),
                     created_at=transform_output["date"],
                 )
             )
 
             for raw_player in transform_output["players"]:
-                job = session.merge(models.Job(id=raw_player["job"]))
+                faction = (
+                    session.query(models.Faction)
+                    .filter(models.Faction.name == raw_player["faction"])
+                    .one()
+                )
 
-                player = session.merge(
-                    models.Player(
-                        id=raw_player["id"],
+                job = (
+                    session.query(models.Job)
+                    .filter(
+                        models.Job.name == raw_player["job"],
+                        models.Job.faction_id == faction.id,
+                    )
+                    .one_or_none()
+                )
+                if not job:
+                    job = models.Job(name=raw_player["job"], faction_id=faction.id)
+                session.add(job)
+
+                player = (
+                    session.query(models.Player)
+                    .filter(models.Player.guid == raw_player["id"])
+                    .one_or_none()
+                )
+                if not player:
+                    player = models.Player(
+                        guid=raw_player["id"],
                         name=raw_player["ooc_name"],
                     )
-                )
+                    session.add(player)
+
                 player_round = (
                     session.query(models.PlayerRound)
                     .filter(
@@ -177,7 +217,7 @@ class Replays:
                     .first()
                 )
                 if player_round:
-                    player_round.job_id = raw_player["job"]
+                    player_round.job_id = job.id
                 else:
                     session.add(
                         models.PlayerRound(

@@ -28,23 +28,28 @@ class Base(sa_orm.DeclarativeBase):
 
 class Map(Base):
     __tablename__ = "maps"
-    id: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String(100), primary_key=True)
-
-
-class Job(Base):
-    __tablename__ = "jobs"
-    id: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String(100), primary_key=True)
-
-
-class Player(Base):
-    __tablename__ = "players"
-    id: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String(100), primary_key=True)
-    name: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String(100))
+    id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.BigInteger, primary_key=True)
+    name: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.Text(), unique=True)
 
 
 class Faction(Base):
     __tablename__ = "factions"
-    id: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String(100), primary_key=True)
+    id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.BigInteger, primary_key=True)
+    name: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.Text(), unique=True)
+
+
+class Job(Base):
+    __tablename__ = "jobs"
+    id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.BigInteger, primary_key=True)
+    name: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.Text(), unique=True)
+    faction_id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.ForeignKey("factions.id"))
+
+
+class Player(Base):
+    __tablename__ = "players"
+    id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.BigInteger, primary_key=True)
+    guid: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.Text(), unique=True)
+    name: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.Text())
 
 
 class Round(Base):
@@ -54,8 +59,8 @@ class Round(Base):
         sa.types.DateTime(timezone=True),
         default=datetime.datetime.now(tz=datetime.timezone.utc),
     )
-    map: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.ForeignKey("maps.id"))
-    winning_faction: sa_orm.Mapped[str | None] = sa_orm.mapped_column(
+    map: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.String())
+    winning_faction_id: sa_orm.Mapped[int | None] = sa_orm.mapped_column(
         sa.ForeignKey("factions.id"), nullable=True
     )
 
@@ -63,7 +68,9 @@ class Round(Base):
 class PlayerRound(Base):
     __tablename__ = "players_rounds"
     __table_args__ = (sa.UniqueConstraint("player_id", "round_id"),)
-    id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.BigInteger, primary_key=True)
-    player_id: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.ForeignKey("players.id"))
+    id: sa_orm.Mapped[int] = sa_orm.mapped_column(
+        sa.BigInteger, primary_key=True, autoincrement=True
+    )
+    player_id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.ForeignKey("players.id"))
     round_id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.ForeignKey("rounds.id"))
-    job_id: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.ForeignKey("jobs.id"))
+    job_id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.ForeignKey("jobs.id"))
