@@ -1,7 +1,7 @@
 name: Continuous Delivery
 on:
-  release:
-    types: [released]
+  push:
+    branches: [ master ]
 env:
   IMAGE_NAME: rmc14-stats
 jobs:
