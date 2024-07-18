@@ -1,14 +1,16 @@
 [project]
 dependencies = [
-    "requests",
+    "alembic",
+    "loguru",
+    "psycopg",
     "pyyaml",
+    "requests",
     "unzip-http",
 ]
 optional-dependencies = { dev = [
     "bandit",
     "pre-commit",
     "pyright",
-    "types-beautifulsoup4",
     "ruff",
 ] }
 name = "ss14_replay_stats"
