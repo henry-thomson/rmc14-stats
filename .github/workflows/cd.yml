@@ -3,7 +3,7 @@ on:
   release:
     types: [released]
 env:
-  IMAGE_NAME: traveller
+  IMAGE_NAME: rmc14-stats
 jobs:
   cd:
     runs-on: ubuntu-latest
