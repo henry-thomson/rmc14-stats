@@ -147,8 +147,8 @@ class Replays:
         with models.Session.begin() as session:
             map_ = session.merge(models.Map(id=transform_output["map"]))
 
-            # if session.query(models.Round).get(transform_output["round_id"]):
-            #     return
+            if session.query(models.Round).get(transform_output["round_id"]):
+                return
 
             round_ = session.merge(
                 models.Round(
