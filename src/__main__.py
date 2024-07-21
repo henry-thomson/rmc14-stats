@@ -97,7 +97,7 @@ class Replays:
         map_str = None
         try:
             map_str = data["maps"][1]
-        except (KeyError, TypeError):
+        except (KeyError, TypeError, IndexError):
             try:
                 map_str = data["maps"][0]
             except KeyError:
