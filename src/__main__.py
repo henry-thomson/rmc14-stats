@@ -98,7 +98,10 @@ class Replays:
         try:
             map_str = data["maps"][1]
         except (KeyError, TypeError):
-            map_str = data["map"]
+            try:
+                map_str = data["maps"][0]
+            except KeyError:
+                map_str = data["map"]
         if map_str == "Solaris":
             map_str = "Solaris Ridge"
         if map_str == "Almayer":
