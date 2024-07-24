@@ -107,6 +107,10 @@ class Replays:
         if map_str == "Almayer":
             map_str = "LV624"
 
+        for x in data["roundEndPlayers"]:
+            if len(x["jobPrototypes"]) > 1:
+                raise RuntimeError(f"Found more then one job prototype: {x}")
+
         players: list[dict[str, str]] = [
             {
                 "id": x["playerGuid"],
