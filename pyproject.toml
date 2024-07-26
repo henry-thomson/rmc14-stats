@@ -6,6 +6,7 @@ dependencies = [
     "pyyaml",
     "requests",
     "unzip-http",
+    "sentry-sdk",
 ]
 optional-dependencies = { dev = [
     "bandit",

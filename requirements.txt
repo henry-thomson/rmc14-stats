@@ -7,7 +7,9 @@ argcomplete==3.4.0
 bandit==1.7.9
     # via ss14-replay-stats (pyproject.toml)
 certifi==2024.7.4
-    # via requests
+    # via
+    #   requests
+    #   sentry-sdk
 cfgv==3.4.0
     # via pre-commit
 charset-normalizer==3.3.2
@@ -62,7 +64,7 @@ psycopg==3.2.1
     # via ss14-replay-stats (pyproject.toml)
 pygments==2.18.0
     # via rich
-pyright==1.1.372
+pyright==1.1.373
     # via ss14-replay-stats (pyproject.toml)
 pyyaml==6.0.1
     # via
@@ -76,7 +78,9 @@ requests==2.32.3
     # via ss14-replay-stats (pyproject.toml)
 rich==13.7.1
     # via bandit
-ruff==0.5.2
+ruff==0.5.5
+    # via ss14-replay-stats (pyproject.toml)
+sentry-sdk==2.11.0
     # via ss14-replay-stats (pyproject.toml)
 sqlalchemy==2.0.31
     # via alembic
@@ -96,6 +100,7 @@ unzip-http==0.6
 urllib3==2.2.2
     # via
     #   requests
+    #   sentry-sdk
     #   unzip-http
 virtualenv==20.26.3
     # via pre-commit

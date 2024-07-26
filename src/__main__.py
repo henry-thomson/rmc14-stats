@@ -1,4 +1,5 @@
 import datetime
+import os
 import re
 import typing as t
 
@@ -8,6 +9,17 @@ import yaml
 from loguru import logger
 
 from src import models
+
+SENTRY_DSN = os.getenv("SENTRY_DSN")
+if SENTRY_DSN:
+    import sentry_sdk
+
+    from src import __version__
+
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        release=__version__,
+    )
 
 ROOT_URL = "https://replays.rouny-ss14.com/replays/alamo"
 HREF_FINDER = re.compile(r'<a href="([\d]+)\/">')
