@@ -116,8 +116,8 @@ class Replays:
                 map_str = data["map"]
         if map_str == "Solaris":
             map_str = "Solaris Ridge"
-        if map_str == "Almayer":
-            map_str = "LV624"
+        if map_str == "LV624":
+            map_str = "LV-624"
 
         for x in data["roundEndPlayers"]:
             if len(x["jobPrototypes"]) > 1:
