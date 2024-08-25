@@ -153,7 +153,10 @@ class Replays:
         elif any(("All of the marines were wiped out!" in data["roundEndText"],)):
             winning_faction = "xenonids"
         elif any(
-            (("Mutual Annihilation!" in data["roundEndText"]),),
+            (
+                ("Mutual Annihilation!" in data["roundEndText"]),
+                ("No outcome!" in data["roundEndText"]),
+            ),
         ):
             winning_faction = "none"
         else:
