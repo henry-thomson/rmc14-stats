@@ -57,6 +57,6 @@ jobs:
 
       - name: Deploy
         run: |
-          ssh diraven@diraven.com "cd services/rmc14_stats && docker compose pull && docker compose run app"
+          ssh diraven@${{secrets.SERVER_SSH_HOST}} "cd services/rmc14_stats && docker compose pull && docker compose run app"
         env:
           SERVER_SSH_HOST: ${{secrets.SERVER_SSH_HOST}}
