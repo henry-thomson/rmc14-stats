@@ -59,12 +59,12 @@ class Round(Base):
         sa.types.DateTime(timezone=True),
         default=datetime.datetime.now(tz=datetime.timezone.utc),
     )
-    map_id: sa_orm.Mapped[int] = sa_orm.mapped_column(
-        sa.ForeignKey("maps.id"), nullable=True
-    )
+    map_id: sa_orm.Mapped[int] = sa_orm.mapped_column(sa.ForeignKey("maps.id"))
     winning_faction_id: sa_orm.Mapped[int | None] = sa_orm.mapped_column(
         sa.ForeignKey("factions.id"), nullable=True
     )
+    winning_score: sa_orm.Mapped[float] = sa_orm.mapped_column(sa.Float())
+    summary_message: sa_orm.Mapped[str] = sa_orm.mapped_column(sa.Text())
 
 
 class PlayerRound(Base):

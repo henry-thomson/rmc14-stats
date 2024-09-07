@@ -39,8 +39,10 @@ class TransformOutput(t.TypedDict):
     date: datetime.datetime
     map: str
     winning_faction: str
+    winning_score: float
     players: list[dict[str, str]]
     round_id: int
+    summary_message: str
 
 
 class Replays:
@@ -139,19 +141,33 @@ class Replays:
             for x in data["roundEndPlayers"]
         ]
 
-        if any(
+        # Xeno minor.
+        if (
+            "The xenos hijacked a dropship" in data["roundEndText"]
+            and "but were wiped out by the marine" in data["roundEndText"]
+        ):
+            winning_faction = "xenonids"
+            winning_score = 0.5
+        # Xeno major.
+        elif "All of the marines were wiped out!" in data["roundEndText"]:
+            winning_faction = "xenonids"
+            winning_score = 1
+        # Marine minor.
+        elif (
+            "The xeno hive was thrown into disarray after losing its xeno Queen!"
+            in data["roundEndText"]
+        ):
+            winning_faction = "unmc"
+            winning_score = 0.5
+        # Marine major.
+        elif any(
             (
                 "All of the xenos were wiped out!" in data["roundEndText"],
                 "Marine Major victory!" in data["roundEndText"],
-                "The xenos hijacked a dropship" in data["roundEndText"]
-                and "but were wiped out by the marine" in data["roundEndText"],
-                "The xeno hive was thrown into disarray after losing its xeno Queen!"
-                in data["roundEndText"],
-            ),
+            )
         ):
             winning_faction = "unmc"
-        elif any(("All of the marines were wiped out!" in data["roundEndText"],)):
-            winning_faction = "xenonids"
+            winning_score = 1
         elif any(
             (
                 ("Mutual Annihilation!" in data["roundEndText"]),
@@ -159,6 +175,7 @@ class Replays:
             ),
         ):
             winning_faction = "none"
+            winning_score = 0
         else:
             raise RuntimeError(
                 f"Unable to parse end round message, winner unknown: {data['roundEndText']}"
@@ -171,7 +188,9 @@ class Replays:
             "map": map_str,
             "round_id": round_id,
             "winning_faction": winning_faction,
+            "winning_score": winning_score,
             "players": players,
+            "summary_message": data["roundEndText"],
         }
 
     def _load(self, transform_output: TransformOutput):
@@ -204,6 +223,8 @@ class Replays:
                         .one()
                         .id
                     ),
+                    winning_score=transform_output["winning_score"],
+                    summary_message=transform_output["summary_message"],
                     created_at=transform_output["date"],
                 )
             )
