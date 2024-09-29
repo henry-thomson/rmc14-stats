@@ -147,7 +147,7 @@ class Replays:
             and "but were wiped out by the marine" in data["roundEndText"]
         ):
             winning_faction = "xenonids"
-            winning_score = 0.5
+            winning_score = 0  # don't care about minor wins atm
         # Xeno major.
         elif "All of the marines were wiped out!" in data["roundEndText"]:
             winning_faction = "xenonids"
@@ -158,7 +158,7 @@ class Replays:
             in data["roundEndText"]
         ):
             winning_faction = "unmc"
-            winning_score = 0.5
+            winning_score = 0  # don't care about minor wins atm
         # Marine major.
         elif any(
             (
