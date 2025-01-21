@@ -10,15 +10,15 @@ jobs:
         permissions:
           contents: read
         environment: production
-    
+
         steps:
           - uses: actions/checkout@v4
-    
+
           - name: Set up SSH key
             uses: webfactory/ssh-agent@v0.9.0
             with:
               ssh-private-key: ${{ secrets.SERVER_SSH_PRIVATE_KEY }}
-    
+
           - name: Set up known_hosts
             run: |
               mkdir -p ~/.ssh/
@@ -27,10 +27,9 @@ jobs:
             shell: bash
             env:
               SERVER_SSH_KNOWN_HOSTS: ${{secrets.SERVER_SSH_KNOWN_HOSTS}}
-    
+
           - name: Deploy
             run: |
               ssh diraven@diraven.com "cd services/rmc14_stats && docker compose pull && docker compose run app"
             env:
               SERVER_SSH_HOST: ${{secrets.SERVER_SSH_HOST}}
-    
