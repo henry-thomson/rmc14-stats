@@ -134,7 +134,8 @@ class Replays:
                 and x["jobPrototypes"][0].startswith("CMXeno")
                 else "unmc",
             }
-            for x in data["roundEndPlayers"] if x["playerOOCName"] != "(IMPOSSIBLE: REGISTERED MIND WITH NO OWNER)"
+            for x in data["roundEndPlayers"]
+            if x["playerOOCName"] != "(IMPOSSIBLE: REGISTERED MIND WITH NO OWNER)"
         ]
 
         # Xeno minor.
