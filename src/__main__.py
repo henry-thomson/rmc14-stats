@@ -160,6 +160,7 @@ class Replays:
         elif any(
             (
                 "All of the xenos were wiped out!" in data["roundEndText"],
+                "The xeno hive was wiped out!" in data["roundEndText"],
                 "Marine Major victory!" in data["roundEndText"],
             )
         ):
