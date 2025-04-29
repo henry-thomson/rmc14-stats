@@ -116,10 +116,6 @@ class Replays:
                 map_str = data["maps"][0]
             except KeyError:
                 map_str = data["map"]
-        if map_str == "Solaris":
-            map_str = "Solaris Ridge"
-        if map_str == "LV624":
-            map_str = "LV-624"
 
         players: list[dict[str, str]] = [
             {
@@ -150,9 +146,15 @@ class Replays:
             winning_faction = "xenonids"
             winning_score = 1
         # Marine minor.
-        elif (
-            "The xeno hive was thrown into disarray after losing its xeno Queen!"
-            in data["roundEndText"]
+        elif any(
+            (
+                "The xeno hive was thrown into disarray after losing its xeno Queen!"
+                in data["roundEndText"],
+                # No idea what the heck this one is, so just assiming it's a minor win
+                # and assigning no score to it.
+                "The VIPs were secured and the marines managed to survive"
+                in data["roundEndText"],
+            )
         ):
             winning_faction = "unmc"
             winning_score = 0  # don't care about minor wins atm
