@@ -153,6 +153,7 @@ class Replays:
                 # No idea what the heck this one is, so just assiming it's a minor win
                 # and assigning no score to it.
                 "VIP" in data["roundEndText"],
+                "PMC" in data["roundEndText"],
             )
         ):
             winning_faction = "unmc"
