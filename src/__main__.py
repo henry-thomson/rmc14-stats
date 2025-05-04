@@ -152,8 +152,7 @@ class Replays:
                 in data["roundEndText"],
                 # No idea what the heck this one is, so just assiming it's a minor win
                 # and assigning no score to it.
-                "The VIPs were secured and the marines managed to survive"
-                in data["roundEndText"],
+                "VIP" in data["roundEndText"],
             )
         ):
             winning_faction = "unmc"
