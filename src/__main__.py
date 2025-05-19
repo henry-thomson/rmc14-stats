@@ -177,9 +177,14 @@ class Replays:
             winning_faction = "none"
             winning_score = 0
         else:
-            raise RuntimeError(
-                f"Unable to parse end round message, winner unknown: {data['roundEndText']}"
-            )
+            # There are all kinds of random weird end round messages now.
+            # So we are going to just assume base ones don't change.
+            # We mark these as UNMC with 0 score, should be good enough.
+            winning_faction = "unmc"
+            winning_score = 0
+            # raise RuntimeError(
+            #     f"Unable to parse end round message, winner unknown: {data['roundEndText']}"
+            # )
 
         round_id = int(data["roundId"])
 
