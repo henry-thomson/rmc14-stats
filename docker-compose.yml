@@ -10,6 +10,14 @@ services:
     ports:
       - "5432:5432" # remove this line if you don't want to expose the port to the host
 
+  grafana:
+    image: docker.io/grafana/grafana-oss
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./.grafana-storage:/var/lib/grafana
+    user: '0'
+
   app:
     build: .
     init: true
