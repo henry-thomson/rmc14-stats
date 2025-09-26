@@ -411,6 +411,7 @@ class Replays:
     def downloadFile(self, replay_url):
         zipFileName = Path(replay_url).name
         localFilePath = Path( CURRENT_FILE_PARENT / "data" / "yaml" / zipFileName).with_suffix(".yaml")
+        localFilePath.parent.mkdir(exist_ok=True, parents=True) # Create the folders if it doesnt exist
 
         try:
             remote_zip_file = unzip_http.RemoteZipFile(replay_url)
