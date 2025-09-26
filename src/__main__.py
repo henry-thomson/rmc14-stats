@@ -21,7 +21,7 @@ if SENTRY_DSN:
         release=__version__,
     )
 
-ROOT_URL = "https://replays.rouny-ss14.com/replays/alamo"
+ROOT_URL = "https://replays.rouny-ss14.com/replays/alamo/"
 HREF_FINDER = re.compile(r'<a href="([\d]+)\/">')
 REPLAY_FINDER = re.compile(r'<a href="([^"]+\.zip)">')
 TIMEOUT = 5
