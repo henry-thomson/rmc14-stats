@@ -402,6 +402,8 @@ class Replays:
         # Basically a set(currentLinks) - set(previousLinks), but sets dont keep the nice list ordering,
         # not that it should matter that much
         self.newReplayLinks = [link for link in self.currentReplayLinks if link not in self.previousReplayLinks]
+        print("New replay links")
+        print(self.newReplayLinks)
 
 
     def downloadFile(self, replay_url):
@@ -413,6 +415,7 @@ class Replays:
             yamlData = remote_zip_file.open("_replay/replay_final.yml").read()
             with localFilePath.open("wb") as f:
                 f.write(yamlData)
+            print(f"Downloaded {replay_url}")
 
         except Exception:
             print(f"Ingoring a bad zip file {replay_url}")
