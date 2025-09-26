@@ -403,7 +403,9 @@ class Replays:
         # not that it should matter that much
         self.newReplayLinks = [link for link in self.currentReplayLinks if link not in self.previousReplayLinks]
         print("New replay links")
-        print(self.newReplayLinks)
+        for link in self.newReplayLinks:
+            print(link)
+            
 
 
     def downloadFile(self, replay_url):
@@ -417,7 +419,8 @@ class Replays:
                 f.write(yamlData)
             print(f"Downloaded {replay_url}")
 
-        except Exception:
+        except Exception as e:
+            print(e)
             print(f"Ingoring a bad zip file {replay_url}")
 
 
