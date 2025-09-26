@@ -46,6 +46,13 @@ class TransformOutput(t.TypedDict):
 
 
 class Replays:
+
+    def __init__(self):
+        self.oldReplayLinks = []
+        self.previousReplayLinks = []
+        self.currentReplayLinks = []
+        self.newReplayLinks = []
+
     @property
     def _replay_urls(self):
         response = requests.get(ROOT_URL, timeout=TIMEOUT)
