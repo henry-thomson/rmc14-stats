@@ -170,6 +170,7 @@ class Replays:
                         logger.warning(f"Missing summary data {localFilePath}")
                         continue
                     if data["roundEndText"] is None:
+                        # Most likely a restart with 0s round duration, or a PVE event
                         logger.warning(f"Missing round end text {localFilePath}")
                         continue
 
@@ -422,6 +423,8 @@ class Replays:
 
         except Exception as e:
             print(e)
+            # Not sure about the cause, but majority of the time it is a corrupted zip file
+            # Usually missing EOF marker, although can be still extracted with `7z x <filename>`
             print(f"Ingoring a bad zip file {replay_url}")
 
 
