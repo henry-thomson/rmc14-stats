@@ -1,0 +1,10 @@
+services:
+  db:
+    image: docker.io/postgres
+    restart: always
+    shm_size: 128mb
+    volumes:
+      - ./.data:/var/lib/postgresql/data
+      - ./postgresDump:/docker-entrypoint-initdb.d/
+    env_file:
+      - .env
