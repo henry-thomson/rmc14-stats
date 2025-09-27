@@ -36,5 +36,7 @@ I believe that the previous project had a remote server that had a DB where all 
 
 ## Extra notes
 I am not sure what happened to the previous project, but I wanted to keep it alive, and make it as simple as possible for anyone interested to build on top of what was created before.
+
 However, while trying to keep all of the previous code unchanged, the current state of the code is in a bit of a disarray. So just a warning that it might be a bit confusing.
+
 I am very much aware of how awful the code, instructions, and everything that has been commited to the git is. My prime goal was to allow anyone who can install docker to run the project. There are certainly better ways to achieve the same, I just didn't want to make 50 step README, and I didn't want to spend too much time on the project. Any suggestions and improvements are extremely welcome.
