@@ -13,9 +13,15 @@ docker --version
 docker compose --version
 ```
 
-If everything is working as expected, you should only need to run
+You can then load the data from the DB data dump(needs to be done only once) with:
 ```
-docker compose up
+docker compose -f docker-compose-initial.yml up
+```
+If you see `database system is ready to accept connections` in the logs, everything should have finished and you can stop the project with `ctrl+C`.
+
+You can then start the whole project with:
+```
+docker compose up --force-recreate --build
 ```
 It would start a local DB, Grafana with the same graphs that previous project used, and load the most recent data. Then you can visit http://localhost:3000/, use `admin` username and password, and browse whatever you want.
 
@@ -31,4 +37,4 @@ I believe that the previous project had a remote server that had a DB where all 
 ## Extra notes
 I am not sure what happened to the previous project, but I wanted to keep it alive, and make it as simple as possible for anyone interested to build on top of what was created before.
 However, while trying to keep all of the previous code unchanged, the current state of the code is in a bit of a disarray. So just a warning that it might be a bit confusing.
-
+I am very much aware of how awful the code, instructions, and everything that has been commited to the git is. My prime goal was to allow anyone who can install docker to run the project. There are certainly better ways to achieve the same, I just didn't want to make 50 step README, and I didn't want to spend too much time on the project. Any suggestions and improvements are extremely welcome.
