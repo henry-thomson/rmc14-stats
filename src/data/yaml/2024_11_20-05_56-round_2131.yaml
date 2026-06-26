@@ -1,0 +1,827 @@
+maps:
+- Almayer
+- Fiorina Science Annex
+gamemode: Distress Signal
+roundEndPlayers:
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: bd177abc-fbbb-473e-931b-9a9dae18d43b
+  playerICName: Alex Rifler
+  playerOOCName: 1bob1
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoHivelord
+  - CMXenoDrone
+  playerGuid: bd177abc-fbbb-473e-931b-9a9dae18d43b
+  playerICName: Larva (XX-118)
+  playerOOCName: 1bob1
+- antagPrototypes: []
+  jobPrototypes:
+  - CMDoctor
+  playerGuid: 901e7509-43ad-4d4c-ba78-1f37b4626987
+  playerICName: Wud-Xal
+  playerOOCName: 400ferrets
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLesserDrone
+  playerGuid: 8cb5f0af-30ce-40f8-9aa6-c47c6a6f894e
+  playerICName: Lesser Drone (XX-926)
+  playerOOCName: Alexch212
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoRunner
+  playerGuid: 8cb5f0af-30ce-40f8-9aa6-c47c6a6f894e
+  playerICName: Larva (XX-172)
+  playerOOCName: Alexch212
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLesserDrone
+  playerGuid: 8cb5f0af-30ce-40f8-9aa6-c47c6a6f894e
+  playerICName: Lesser Drone (XX-51)
+  playerOOCName: Alexch212
+- observer: True
+  antagPrototypes: []
+  jobPrototypes:
+  - CMXenoDefender
+  playerGuid: 8cb5f0af-30ce-40f8-9aa6-c47c6a6f894e
+  playerICName: Alice Iyakovna
+  playerOOCName: Alexch212
+- antagPrototypes: []
+  jobPrototypes:
+  - CMDropshipCrewChief
+  playerGuid: b39ea987-0b8c-4f36-a6a8-06febbead49d
+  playerICName: Marrik'
+  playerOOCName: AmalgoMyte
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSurvivor
+  playerGuid: bb18ec0a-9b69-4fe7-8952-cb3fd441b042
+  playerICName: ArcaneCarrot
+  playerOOCName: ArcaneCarrot
+- antagPrototypes: []
+  jobPrototypes:
+  - CMMilitaryWarden
+  playerGuid: 916cba8a-e995-43a4-b1fd-8c9e512e8471
+  playerICName: Kazi Priestess
+  playerOOCName: Arcticular
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 0e3c7afc-4366-48a1-af0c-a9a8c1ecf0e6
+  playerICName: Nesart Onan
+  playerOOCName: Arykh
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLurker
+  playerGuid: 0e3c7afc-4366-48a1-af0c-a9a8c1ecf0e6
+  playerICName: Lurker (XX-284)
+  playerOOCName: Arykh
+- antagPrototypes: []
+  jobPrototypes:
+  - CMStaffOfficer
+  playerGuid: fd4e72f0-a1e5-4552-a44e-fdbfd46531e3
+  playerICName: Valoa Distress
+  playerOOCName: Balneo
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: ca00892b-d1d0-45a9-84b9-0a115a9395ec
+  playerICName: Camden Best
+  playerOOCName: bashergamer
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 7387cd02-bc0a-443e-8799-572d363efb4c
+  playerICName: Iron Allen
+  playerOOCName: Bayron
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSmartGunOperator
+  playerGuid: 3c33ae12-2a8b-4625-acd3-3858ea85a1a4
+  playerICName: Jorge Poppa
+  playerOOCName: BigJorge
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: bed0a39e-78d1-4e3a-a1eb-643ed2934780
+  playerICName: John Gugger
+  playerOOCName: bogdanite
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCombatTech
+  playerGuid: 150e8117-636c-4038-bf0d-de32b5fe7e93
+  playerICName: Raj-Tehat
+  playerOOCName: Bozobo
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 9fe8be00-d809-4809-b256-61edfe6b0dbf
+  playerICName: David Whittaker
+  playerOOCName: BrassBuckle
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 62e5fbab-191b-421d-90e0-4f2c46950112
+  playerICName: Rodger Albright
+  playerOOCName: BulkEngineer
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCorrespondent
+  playerGuid: da4843de-a212-4c03-9c05-10055db0bd4a
+  playerICName: Vincent Gabool
+  playerOOCName: Bumlocked
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoDefender
+  playerGuid: 98c259a6-4c8f-4876-b6fd-2ae6f006193b
+  playerICName: Larva (XX-88)
+  playerOOCName: BurnoutJack
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSquadLeader
+  playerGuid: 98c259a6-4c8f-4876-b6fd-2ae6f006193b
+  playerICName: Jack 'Burnout' Jack
+  playerOOCName: BurnoutJack
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: 83c76788-bf9e-47f5-b300-4b61c7fe9533
+  playerICName: Issac Deathshead
+  playerOOCName: CarpetedKitchen
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSmartGunOperator
+  playerGuid: 52f7bb57-6e26-4055-b46b-5e50a86c25e3
+  playerICName: Balanced Moss
+  playerOOCName: Clone0401
+- antagPrototypes: []
+  jobPrototypes:
+  - CMMaintTech
+  playerGuid: eae118ac-56c1-41b2-9615-654822bcce6f
+  playerICName: Natalia Carr
+  playerOOCName: Company_Employee
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: e227077a-2ff9-44e4-89ce-2b2bad63a63d
+  playerICName: Alex Borgie
+  playerOOCName: dberi21
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoParasite
+  playerGuid: e227077a-2ff9-44e4-89ce-2b2bad63a63d
+  playerICName: Parasite (XX-406)
+  playerOOCName: dberi21
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoParasite
+  playerGuid: e227077a-2ff9-44e4-89ce-2b2bad63a63d
+  playerICName: Parasite (XX-630)
+  playerOOCName: dberi21
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoWarrior
+  playerGuid: e227077a-2ff9-44e4-89ce-2b2bad63a63d
+  playerICName: Larva (XX-917)
+  playerOOCName: dberi21
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoParasite
+  playerGuid: e227077a-2ff9-44e4-89ce-2b2bad63a63d
+  playerICName: Parasite (XX-485)
+  playerOOCName: dberi21
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoParasite
+  playerGuid: e227077a-2ff9-44e4-89ce-2b2bad63a63d
+  playerICName: Parasite (XX-64)
+  playerOOCName: dberi21
+- antagPrototypes: []
+  jobPrototypes:
+  - CMHospitalCorpsman
+  playerGuid: c94e4ef0-c29b-4ff1-a03e-5c15eee8f0b9
+  playerICName: Vat Fairfutre
+  playerOOCName: Elysyo
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoCarrier
+  playerGuid: ed91e948-861e-485c-a339-0d383a0e46d1
+  playerICName: Carrier (XX-482)
+  playerOOCName: ERROR_404
+- antagPrototypes: []
+  jobPrototypes:
+  - CMHospitalCorpsman
+  playerGuid: ff2f2d10-e5bf-4c86-a0c9-513365b2e78b
+  playerICName: Paris Rockwell
+  playerOOCName: Eve_Trader
+- antagPrototypes: []
+  jobPrototypes:
+  - CMHospitalCorpsman
+  playerGuid: 97bc8f8f-b1ed-4b20-94b7-5e655b22f723
+  playerICName: Quelnath 'Doc' Potal
+  playerOOCName: Falliant
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoDrone
+  playerGuid: 97bc8f8f-b1ed-4b20-94b7-5e655b22f723
+  playerICName: Larva (XX-562)
+  playerOOCName: Falliant
+- antagPrototypes: []
+  jobPrototypes:
+  - CMWeaponsSpecialist
+  playerGuid: 0347a889-c28a-4883-a325-6ce229e689bf
+  playerICName: Tama ''Agni'' Imparfait
+  playerOOCName: Fardoche0
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoHivelord
+  playerGuid: 0347a889-c28a-4883-a325-6ce229e689bf
+  playerICName: Larva (XX-639)
+  playerOOCName: Fardoche0
+- antagPrototypes: []
+  jobPrototypes:
+  - CMFireteamLeader
+  playerGuid: 7ecd366c-51f5-4842-b680-ecab7d56c6ec
+  playerICName: Harry 'Fruit' Christchurch
+  playerOOCName: footstool
+- antagPrototypes: []
+  jobPrototypes:
+  - CMNurse
+  playerGuid: 5a220c50-d75a-4523-8b63-3ba3cf6549b9
+  playerICName: Keira Hincken
+  playerOOCName: Fragmented_Wolfy
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 3676980a-d9a2-4c7c-84de-c8d97ef07eab
+  playerICName: Fritz Vohlkson
+  playerOOCName: FritzVohlkson
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoCrusher
+  playerGuid: 07002f9c-a873-40ae-b9e7-6ce4c9f0069c
+  playerICName: Larva (XX-129)
+  playerOOCName: Frog6645
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSurvivor
+  playerGuid: 07002f9c-a873-40ae-b9e7-6ce4c9f0069c
+  playerICName: Unknown
+  playerOOCName: Frog6645
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: cd74c122-15fd-4384-87b3-8b0b1360311d
+  playerICName: Julia Weeks
+  playerOOCName: gabagoogis
+- antagPrototypes: []
+  jobPrototypes:
+  - CMPilotDropship
+  playerGuid: 15d914f4-e436-496a-afe0-0e127297ed36
+  playerICName: Jester-Who-Helps
+  playerOOCName: GentleJester
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSmartGunOperator
+  playerGuid: 7ded1d65-808f-4e8d-8726-cd76d9cb0047
+  playerICName: Glub Gooberson
+  playerOOCName: Goober_Tuuber
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 4af3621c-98e8-42ec-8955-33e64c9e4833
+  playerICName: Ruka
+  playerOOCName: Haybale
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCargoTech
+  playerGuid: 022221b5-c055-4998-9212-8aafa08c3609
+  playerICName: Samuel 'Morpho' Flamecoat
+  playerOOCName: Inzarious
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoSpitter
+  playerGuid: aaefaeb9-a300-4c90-8851-f9b4d4524499
+  playerICName: Larva (XX-579)
+  playerOOCName: Jerry_Aqua
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: aaefaeb9-a300-4c90-8851-f9b4d4524499
+  playerICName: Rells-in-Glory
+  playerOOCName: Jerry_Aqua
+- antagPrototypes: []
+  jobPrototypes:
+  - CMHospitalCorpsman
+  playerGuid: 9bef20a3-d35e-4de8-b7c9-a48eb66a3ca6
+  playerICName: Oswald Vandenburg
+  playerOOCName: Jhagged
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: 378a095c-fe55-4376-8a9a-cbcafd7b71f5
+  playerICName: Tishov-Drygva
+  playerOOCName: JirroZ
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCombatTech
+  playerGuid: efe40ec4-b685-4025-8239-fdea3da1e019
+  playerICName: Merlin Leander
+  playerOOCName: Jorc224
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCombatTech
+  playerGuid: 40b2873b-cebc-435c-96e5-7a73c1ccc17e
+  playerICName: Valerie Sanders
+  playerOOCName: Just_A_Waffle
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoDefender
+  playerGuid: 336990dd-d79f-42da-8498-d52f63b4f446
+  playerICName: Defender (XX-933)
+  playerOOCName: Kaiserbrody
+- antagPrototypes: []
+  jobPrototypes:
+  - CMLiaison
+  playerGuid: 63503a1b-5dd9-405e-92e6-e6fb9608c37e
+  playerICName: Carter Burke
+  playerOOCName: Kazdra_Zver
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: fbc93fa2-e002-4ac7-851e-1c153808b431
+  playerICName: Grundle
+  playerOOCName: Kimg
+- antagPrototypes: []
+  jobPrototypes:
+  - CMAuxiliarySupportOfficer
+  playerGuid: 9226a461-8d9a-49a2-824e-fdf9a7b1d81f
+  playerICName: Herbsquirto
+  playerOOCName: Klimik
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoSentinel
+  playerGuid: 171dc007-c71d-48cc-9bf5-b7e05242954f
+  playerICName: Larva (XX-976)
+  playerOOCName: Krispy_Lime
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 171dc007-c71d-48cc-9bf5-b7e05242954f
+  playerICName: Ricardo Rohtin
+  playerOOCName: Krispy_Lime
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSquadLeader
+  playerGuid: 1dcc1fcc-8332-4573-8784-62dc491fb41e
+  playerICName: Darfman Forgemog
+  playerOOCName: LampMan
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 6c57ac40-cca1-4da2-a168-7f01945ac697
+  playerICName: Ace
+  playerOOCName: LankLTE
+- antagPrototypes: []
+  jobPrototypes:
+  - CMDoctor
+  playerGuid: 5b3fcf16-84ab-4056-8fc2-b0448316551f
+  playerICName: Zaw-Shei
+  playerOOCName: Litledragon
+- antagPrototypes: []
+  jobPrototypes:
+  - CMHospitalCorpsman
+  playerGuid: 847528ab-68c1-419c-9ca9-d55d41e85f7d
+  playerICName: Albrecht 'Alby' Herrmann
+  playerOOCName: Malpas
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCargoTech
+  playerGuid: f5825549-d431-4574-aeb1-28c65cb53952
+  playerICName: Kal-Bura
+  playerOOCName: Masohunter69
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLesserDrone
+  playerGuid: 8106a406-a301-4c74-9ca0-fca079bf396a
+  playerICName: Lesser Drone (XX-576)
+  playerOOCName: MasterKurtle
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 8106a406-a301-4c74-9ca0-fca079bf396a
+  playerICName: Gustavo Stafford
+  playerOOCName: MasterKurtle
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoWarrior
+  playerGuid: 7aee5804-9309-4283-be77-9512ed9f77ab
+  playerICName: Warrior (XX-125)
+  playerOOCName: Mateba
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoPraetorian
+  playerGuid: 2dc63fb1-f830-4b0a-9eea-c8007fd09e6d
+  playerICName: Larva (XX-76)
+  playerOOCName: Max_Power
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 2dc63fb1-f830-4b0a-9eea-c8007fd09e6d
+  playerICName: Astor Debb
+  playerOOCName: Max_Power
+- antagPrototypes: []
+  jobPrototypes:
+  - CMPilotGunship
+  playerGuid: 0737adb2-cc24-4ef5-8f02-663b352ae70e
+  playerICName: Nahami 'Drowsy' Tailwind
+  playerOOCName: Medical_Bucket
+- antagPrototypes: []
+  jobPrototypes:
+  - CMExecutiveOfficer
+  playerGuid: d6a58381-b2a8-4caf-a22a-fd76ca53b1ae
+  playerICName: Mizuno 'Kitty' Drakonovisch
+  playerOOCName: MizunoDrakonov
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: e3a23db0-a9af-4386-aff5-4dbde45d60ee
+  playerICName: Looks-Upon-Stars
+  playerOOCName: MrSkullhead
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCorrespondent
+  playerGuid: 49009a1f-5c48-4b5e-a889-9e813b4c7709
+  playerICName: Marty Budds
+  playerOOCName: MusicMan
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoBoiler
+  - CMXenoCrusher
+  - CMXenoSpitter
+  playerGuid: 5f252d24-2b75-49c1-8776-80ad8607d249
+  playerICName: Boiler (XX-69)
+  playerOOCName: neconers
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLesserDrone
+  playerGuid: 8ee5f406-c2d2-4098-8940-83da5c244e40
+  playerICName: Lesser Drone (XX-947)
+  playerOOCName: NHP_Licorice
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoSpitter
+  playerGuid: 8ee5f406-c2d2-4098-8940-83da5c244e40
+  playerICName: Larva (XX-523)
+  playerOOCName: NHP_Licorice
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLesserDrone
+  playerGuid: 8ee5f406-c2d2-4098-8940-83da5c244e40
+  playerICName: Lesser Drone (XX-540)
+  playerOOCName: NHP_Licorice
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLesserDrone
+  playerGuid: 8ee5f406-c2d2-4098-8940-83da5c244e40
+  playerICName: Lesser Drone (XX-253)
+  playerOOCName: NHP_Licorice
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoDrone
+  playerGuid: 8ee5f406-c2d2-4098-8940-83da5c244e40
+  playerICName: Drone (XX-901)
+  playerOOCName: NHP_Licorice
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 7e690dee-9c2c-4804-8b35-bdab05ea4a4a
+  playerICName: Molly Hall
+  playerOOCName: nookii
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 56295d3e-0033-49fc-ada3-a9baf19bf369
+  playerICName: Shiro 'Lumi' Yuki
+  playerOOCName: Nuzzles
+- antagPrototypes: []
+  jobPrototypes:
+  - CMFireteamLeader
+  playerGuid: 2d7cddb1-242a-4ada-825e-e8e94ffa5517
+  playerICName: Betricks Mothman
+  playerOOCName: odinox
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: aeee4559-f823-4f0b-96bc-36d65b8684fa
+  playerICName: James Moore
+  playerOOCName: OOMFguy
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLarva
+  - CMXenoDrone
+  playerGuid: 4fed0085-4964-472b-857f-e8d51855aadf
+  playerICName: Larva (XX-48)
+  playerOOCName: OwnYion
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 4fed0085-4964-472b-857f-e8d51855aadf
+  playerICName: Eliot Paulson
+  playerOOCName: OwnYion
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSurvivor
+  playerGuid: 5bb80762-7bf7-454e-bf30-8bd3c972fbee
+  playerICName: Unknown
+  playerOOCName: PolarTundra
+- antagPrototypes: []
+  jobPrototypes:
+  - CMWeaponsSpecialist
+  playerGuid: 471d6f7f-05bd-4b74-8163-c4de9f47cdce
+  playerICName: Polishes-The-Boots
+  playerOOCName: Polisho
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLurker
+  playerGuid: 471d6f7f-05bd-4b74-8163-c4de9f47cdce
+  playerICName: Larva (XX-74)
+  playerOOCName: Polisho
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLurker
+  playerGuid: a847b5a3-45cd-4ce0-97aa-f225626b97cc
+  playerICName: Larva (XX-284)
+  playerOOCName: Prosmasher
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoRunner
+  playerGuid: a847b5a3-45cd-4ce0-97aa-f225626b97cc
+  playerICName: Larva (XX-739)
+  playerOOCName: Prosmasher
+- observer: True
+  antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLurker
+  playerGuid: a847b5a3-45cd-4ce0-97aa-f225626b97cc
+  playerICName: Talon Miller
+  playerOOCName: Prosmasher
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoCrusher
+  playerGuid: a847b5a3-45cd-4ce0-97aa-f225626b97cc
+  playerICName: Crusher (XX-92)
+  playerOOCName: Prosmasher
+- antagPrototypes: []
+  jobPrototypes:
+  - CMQuartermaster
+  playerGuid: f1c563b6-24cd-4212-9005-b67a07a7e5da
+  playerICName: Xalos-Of-Europa
+  playerOOCName: Protorype
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: 160a0c57-c8ba-4455-b7ef-a5fa59433986
+  playerICName: Wolfer 'Pyro' Firebrush
+  playerOOCName: PyroIsAPyro
+- antagPrototypes: []
+  jobPrototypes:
+  - CMHospitalCorpsman
+  playerGuid: ad56f134-8c61-4e91-8fc9-cf538ddf3ace
+  playerICName: Zenith Moonwing
+  playerOOCName: Ragnus
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: 9c01bca7-04be-4067-96a2-eea32190e142
+  playerICName: Judah Benford
+  playerOOCName: Red_Atmos
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoPraetorian
+  playerGuid: a0091382-d6c6-4fb1-8cf6-cd4eb49ae4e1
+  playerICName: Larva (XX-775)
+  playerOOCName: Rhettagon
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: a0091382-d6c6-4fb1-8cf6-cd4eb49ae4e1
+  playerICName: Kei 'Ketchup' McIndrick
+  playerOOCName: Rhettagon
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoCrusher
+  playerGuid: 047031c6-6e43-4463-a3eb-7a5194bba836
+  playerICName: Larva (XX-813)
+  playerOOCName: Robg3er
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCombatTech
+  playerGuid: 047031c6-6e43-4463-a3eb-7a5194bba836
+  playerICName: Drew Peack
+  playerOOCName: Robg3er
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 3bbf7926-d0c6-4d41-853a-17415705f622
+  playerICName: Rytil 'Riddle' Pyain
+  playerOOCName: rythinpain
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoRunner
+  playerGuid: 3bbf7926-d0c6-4d41-853a-17415705f622
+  playerICName: Larva (XX-68)
+  playerOOCName: rythinpain
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: 2f46a4bd-7f6e-4a3d-aea2-d045bcdaad30
+  playerICName: Chrip Skyler
+  playerOOCName: Seir
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: d74b1a38-89c9-4651-9de2-fff05a2249b6
+  playerICName: Nona Heret
+  playerOOCName: Shada
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoBoiler
+  - CMXenoSpitter
+  playerGuid: d74b1a38-89c9-4651-9de2-fff05a2249b6
+  playerICName: Larva (XX-825)
+  playerOOCName: Shada
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoQueen
+  - CMXenoQueen
+  playerGuid: d4bd76f9-8226-4555-afab-2ddb92ab3adf
+  playerICName: Queen (XX-703)
+  playerOOCName: ShakoCross
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 355970fc-51f5-493e-837e-c16455c74a00
+  playerICName: Faylin 'Le Fey' Kaysis
+  playerOOCName: Shirby
+- antagPrototypes: []
+  jobPrototypes:
+  - CMFireteamLeader
+  playerGuid: 4bf327f9-4174-4566-802c-f846d635c630
+  playerICName: Tyr 'Tex' Ragnarson
+  playerOOCName: Silentblade
+- antagPrototypes: []
+  jobPrototypes:
+  - CMHospitalCorpsman
+  playerGuid: f17cc59d-e891-4daf-bf7c-175090447bd8
+  playerICName: Pipion 'Boomie' Woollard
+  playerOOCName: SnorpPotato
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoDrone
+  - CMXenoDrone
+  playerGuid: acb32bf8-f74f-4efe-8dc7-0f25af5f8dcc
+  playerICName: Larva (XX-224)
+  playerOOCName: Solari
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: acb32bf8-f74f-4efe-8dc7-0f25af5f8dcc
+  playerICName: Phyliss Oppenheimer
+  playerOOCName: Solari
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: d419fc67-cffb-4838-b64a-d3a47ae7af53
+  playerICName: Spoder 'Spoder' Spoder
+  playerOOCName: SpoderSpoder
+- antagPrototypes: []
+  jobPrototypes:
+  - CMSquadLeader
+  playerGuid: 53f57d83-7c89-43c5-91f4-03c0642b932c
+  playerICName: Braden Stark
+  playerOOCName: Starkzen
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCombatTech
+  playerGuid: 57d44307-17bc-45f9-ada8-ff61dd8ff4fe
+  playerICName: Jeb 'Kamikaze' Jackson
+  playerOOCName: StinkyPeeMan
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoParasite
+  playerGuid: ce6ee330-0f17-4297-bbd4-9a235e782192
+  playerICName: Parasite (XX-801)
+  playerOOCName: sunny345
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoSentinel
+  playerGuid: ce6ee330-0f17-4297-bbd4-9a235e782192
+  playerICName: Larva (XX-959)
+  playerOOCName: sunny345
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: ce6ee330-0f17-4297-bbd4-9a235e782192
+  playerICName: Dagul Keeper
+  playerOOCName: sunny345
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoParasite
+  playerGuid: ce6ee330-0f17-4297-bbd4-9a235e782192
+  playerICName: Parasite (XX-590)
+  playerOOCName: sunny345
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: 983497f1-1692-4c8b-81f7-7bc664d7bb14
+  playerICName: Talon 'Bassmaster' Best
+  playerOOCName: texas1234567889
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoBoiler
+  playerGuid: 983497f1-1692-4c8b-81f7-7bc664d7bb14
+  playerICName: Larva (XX-530)
+  playerOOCName: texas1234567889
+- antagPrototypes: []
+  jobPrototypes:
+  - CMCombatTech
+  playerGuid: 7c570e5a-88c1-4979-91c3-86921957a211
+  playerICName: Dwarf McDwarfy
+  playerOOCName: Thingamajigs
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoHivelord
+  playerGuid: e47ca01e-9faa-4980-ae85-3907b71c287a
+  playerICName: Hivelord (XX-536)
+  playerOOCName: TurtleMaster
+- antagPrototypes: []
+  jobPrototypes:
+  - CMHospitalCorpsman
+  playerGuid: 1b0eb1fe-46fe-4eda-b3d4-06472a34ecdd
+  playerICName: Don 'Asclepius' Lassiter
+  playerOOCName: Vencallium
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoLesserDrone
+  playerGuid: c22758ad-3e01-43c3-8f30-20b211310817
+  playerICName: Lesser Drone (XX-502)
+  playerOOCName: ViviBun
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: c22758ad-3e01-43c3-8f30-20b211310817
+  playerICName: Angel Bell
+  playerOOCName: ViviBun
+- observer: True
+  antagPrototypes: []
+  jobPrototypes: []
+  playerGuid: b808f198-fa92-4ecb-b351-76fd36283ed7
+  playerICName: Scraps-the-Copper
+  playerOOCName: Vorkath
+- antagPrototypes: []
+  jobPrototypes:
+  - CMXenoWarrior
+  playerGuid: 496428df-f08e-4bab-8ce7-0f1c92f1ff22
+  playerICName: Larva (XX-469)
+  playerOOCName: wafflewarior
+- antagPrototypes: []
+  jobPrototypes:
+  - CMFireteamLeader
+  playerGuid: 496428df-f08e-4bab-8ce7-0f1c92f1ff22
+  playerICName: Silvie Wible
+  playerOOCName: wafflewarior
+- antagPrototypes: []
+  jobPrototypes:
+  - CMRifleman
+  playerGuid: df66cdf2-9b51-45de-a63c-aa256a5f2c27
+  playerICName: Kaleb Randolph
+  playerOOCName: WildFrankWest
+- antagPrototypes: []
+  jobPrototypes:
+  - CMWeaponsSpecialist
+  playerGuid: fed21603-6529-4fc9-b950-4aeb72d2e36a
+  playerICName: Kaiser Kreas
+  playerOOCName: wrosin
+roundEndText: >2-
+
+  [color=purple]All of the marines were wiped out![/color]
+
+
+
+  [bold]Operation funded by [color=green]Iantha Atikson[/color]![/bold]
+
+
+
+  [bold]Hive established by [color=purple]Weston Yamada[/color]![/bold]
+server_id: unknown_server_id
+server_name: alamo
+roundId: 2131
+endTick: 2261956
+duration: 01:14:45
+fileCount: 691
+size: 122795127
+uncompressedSize: 742282676
+endTime: 1.01:07:58.2000000
+...
